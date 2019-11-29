@@ -73,7 +73,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
 			// WebKit will check during its rendering of the created HTML that
 			// the image provided is a valid image as well.
 			
-			NSBitmapImageRep *rep = [[im representations] objectAtIndex: 0];
+			NSBitmapImageRep *rep = (NSBitmapImageRep *)[[im representations] objectAtIndex: 0];
 			if (rep != nil)
 			{
 				//int num_frames = [[rep valueForProperty:NSImageFrameCount] intValue];
